@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda LMH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f6f7f9;
+            color: #1f2d3d;
+        }
+
+        header, footer {
+            background: linear-gradient(to right, #6a85e6, #7b4397);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            margin: 20px;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card.destacado {
+            width: 400px;
+            border: 3px solid #7b4397;
+            order: -1;
+            /* Hace que el destacado aparezca primero */
+        }
+
+        .card.destacado .card-header {
+            height: 220px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-size: 3rem;
+        }
+
+        .card.destacado .emoji {
+            font-size: 4rem;
+        }
+
+        .card.destacado .card-body {
+            padding-top: 10px;
+        }
+
+        .card-header {
+            background: linear-gradient(to bottom right, #6a85e6, #7b4397);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            font-size: 2rem;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff9800;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .badge.green {
+            background: #4caf50;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            ;
+        }
+        .card-body2 {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #7f6ec3;
+        }
+
+        .categoria {
+            color: gray;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        .titulo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .descripcion {
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+
+        .precio {
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: #27ae60;
+        }
+
+        .precio-original {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+
+        .descuento {
+            background: #e53935;
+            color: white;
+            border-radius: 5px;
+            padding: 2px 6px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+
+        
+        .estrella {
+            color: orange;
+        }
+
+        .reseñas {
+            font-size: 0.8rem;
+            color: gray;
+        }
+
+        .boton {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background: #2196f3;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .boton:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        footer {
+            font-size: 0.9rem;
+            padding: 30px 10px;
+        }
+
+        footer a {
+            color: #00e0ff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card, .card.destacado {
+                width: 95%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Repaso HTML CSS</h1>
+        <p>Programación II - 12 BTP Informática</p>
+    </header>
+
+    <h2>Tienda LMH</h2>
+
+    <div class="cards">
+        <div class="card destacado">
+            <div class="card-header">
+                <div class="emoji">⭐</div>
+                <div class="badge green">NUEVO</div>
+            </div>
+            <div class="card-body2">
+                <div class="categoria">DESTACADO</div>
+                <div class="titulo">Producto Estrella Premium</div>
+                <div class="descripcion">Este es nuestro producto más popular, con características excepcionales y calidad garantizada.</div>
+                <div><span class="estrella">★★★★★</span> <span class="reseñas">(127 reseñas)</span></div>
+                <div>
+                    <span class="precio">Lps 2,999.99</span>
+                    <span class="precio-original">Lps 3,999.99</span>
+                    <span class="descuento">-25%</span>
+                </div>
+                <button class="boton">COMPRAR AHORA</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">📱<div class="badge">OFERTA</div></div>
+            <div class="card-body">
+                <div class="categoria">ELECTRÓNICOS</div>
+                <div class="titulo">Samsung S25 Ultra 256gb</div>
+                <div class="descripcion">Teléfono inteligente con cámara avanzada, procesador rápido y diseño elegante.</div>
+                <div><span class="estrella">★★★★☆</span> <span class="reseñas">(89 reseñas)</span></div>
+                <div><span class="precio">35,000.00 Lps</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">👟</div>
+            <div class="card-body">
+                <div class="categoria">CALZADO</div>
+                <div class="titulo">Zapatillas Deportivas</div>
+                <div class="descripcion">Perfectas para correr y entrenar, con tecnología de amortiguación avanzada.</div>
+                <div><span class="estrella">★★★★★</span> <span class="reseñas">(203 reseñas)</span></div>
+                <div><span class="precio">Lps 899.99</span></div>
+                <button class="boton">AGREGAR AL CARRITO</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">🎧<div class="badge green">NUEVO</div></div>
+            <div class="card-body">
+                <div class="categoria">AUDIO</div>
+                <div class="titulo">Auriculares Inalámbricos</div>
+                <div class="descripcion">Sonido de alta calidad con cancelación de ruido activa y batería de larga duración.</div>
+                <div><span class="estrella">★★★★☆</span> <span class="reseñas">(45 reseñas)</span></div>
+                <div><span class="precio">Lps 1,499.99</span></div>
+                <button class="boton">AGREGAR AL CARRITO</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">⌚</div>
+            <div class="card-body">
+                <div class="categoria">WEARABLES</div>
+                <div class="titulo">Smartwatch Avanzado</div>
+                <div class="descripcion">Reloj inteligente con monitoreo de salud, GPS y resistencia al agua.</div>
+                <div><span class="estrella">★★★★★</span> <span class="reseñas">(156 reseñas)</span></div>
+                <div><span class="precio">Lps 1,999.99</span></div>
+                <button class="boton" disabled>AGOTADO</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">💼</div>
+            <div class="card-body">
+                <div class="categoria">ACCESORIOS</div>
+                <div class="titulo">Mochila Ejecutiva</div>
+                <div class="descripcion">Perfecta para el trabajo y viajes, con compartimentos organizados y diseño moderno.</div>
+                <div><span class="estrella">★★★★☆</span> <span class="reseñas">(78 reseñas)</span></div>
+                <div><span class="precio">Lps 699.99</span><span class="precio-original">Lps 899.99</span><span class="descuento">-22%</span></div>
+                <button class="boton">AGREGAR AL CARRITO</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Mi Sitio Web - Todos los derechos reservados</p>
+        <p>LMH - Programación II</p>
+        <p>Contacto: <a href="mailto:2023150895@lmh.edu.hn">2023150895@lmh.edu.hn</a></p>
+    </footer>
+</body>
+</html></div>

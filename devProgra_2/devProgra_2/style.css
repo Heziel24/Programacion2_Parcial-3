@@ -1,0 +1,152 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f6f7f9;
+      color: #1f2d3d;
+    }
+
+    header, footer {
+      background: linear-gradient(to right, #6a85e6, #7b4397);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      margin: 20px;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+      width: 300px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to bottom right, #6a85e6, #7b4397);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      position: relative;
+      font-size: 2rem;
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff9800;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .badge.green {
+      background: #4caf50;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .categoria {
+      color: gray;
+      font-size: 0.8rem;
+      margin-bottom: 5px;
+    }
+
+    .titulo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .descripcion {
+      font-size: 0.9rem;
+      margin: 10px 0;
+    }
+
+    .precio {
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: green;
+    }
+
+    .precio-original {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 0.9rem;
+      margin-left: 10px;
+    }
+
+    .descuento {
+      background: #e53935;
+      color: white;
+      border-radius: 5px;
+      padding: 2px 6px;
+      font-size: 0.8rem;
+      margin-left: 10px;
+    }
+
+    .estrella {
+      color: orange;
+    }
+
+    .reseñas {
+      font-size: 0.8rem;
+      color: gray;
+    }
+
+    .boton {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      background: #2196f3;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .boton:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      padding: 30px 10px;
+    }
+
+    footer a {
+      color: #00e0ff;
+      text-decoration: none;
+    }
