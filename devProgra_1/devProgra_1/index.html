@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso HTML CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #2f5d3d;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            background-color: #3e754a;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 700px;
+            text-align: left;
+        }
+        .card h2 {
+            margin-bottom: 20px;
+        }
+        .card p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #2f5d3d;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+        footer a {
+            color: #a0e0ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Repaso HTML CSS</h1>
+        <p>Programación II - 12 BTP Informática</p>
+    </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Sobre Nosotros</a>
+        <a href="#">Servicios</a>
+        <a href="#">Proyectos</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <main>
+        <div class="card">
+            <h2>¿Por qué es importante la estructura HTML?</h2>
+            <p><strong>Accesibilidad:</strong> Los lectores de pantalla y otras tecnologías asistivas pueden navegar mejor por el contenido cuando está bien estructurado.</p>
+            <p><strong>SEO:</strong> Los motores de búsqueda entienden mejor el contenido y pueden indexarlo de manera más efectiva.</p>
+            <p><strong>Mantenimiento:</strong> El código es más fácil de leer, modificar y mantener tanto para ti como para otros desarrolladores.</p>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Mi SitioWeb - Todos los derechos reservados</p>
+        <p>LMH - Programación II</p>
+        <p>Contacto: <a href="mailto:2023150895@lmh.edu.hn">2023150895@lmh.edu.com</a></p>
+    </footer>
+</body>
+</html>
